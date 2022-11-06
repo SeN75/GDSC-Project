@@ -273,15 +273,20 @@ setInterval(() => {
     if (!playA) {
       audio1.play();
       playA = true;
-      
+ 
       document.title = document.getElementById('title').innerText  + '\u2728';
+      document.getElementById('saleh').classList.add('done');
+      _party(document.getElementById('message'))
+
     }
 
     messageBox.style.display = "block";
     messageBox.style.animation = "message-in 0.6s forwards";
-  
+    
+    
   } else {
     playA = false;
+    document.getElementById('saleh').classList.remove('done')
     messageBox.style.animation = "message-out 0.6s forwards";
     setTimeout(() => {
       messageBox.style.display = "none";
@@ -303,9 +308,15 @@ document.addEventListener("mousemove", (eve) => {
   img4.style.bottom = eve.movementY + "px";
   img4.style.left = eve.movementX + "px";
 
-  logo.style.top = eve.movementY * 2 + "px";
-  logo.style.right = eve.movementX * 2 + "px";
+  logo.style.top = eve.movementY * 3 + "px";
+  logo.style.right = eve.movementX * 3 + "px";
 });
 
+function _party(ele) {
+  party.confetti(ele, {
+    count: party.variation.range(20, 40),
+    size: party.variation.range(0.8, 1.2),
+  });
+}
 
 

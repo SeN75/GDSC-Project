@@ -83,29 +83,7 @@ a:hover  {
     opacity: 0.8;
     transition: 0.6s all;
 }
-[data-belong-to="car"]:hover,
-[data-belong-to="car"][active],
-[data-belong-to="car"][check],
-[data-belong-to="car"][hover]  
-{
-    color: green;
 
-}
-
-[data-belong-to="read"]:hover,
-[data-belong-to="read"][active],
-[data-belong-to="read"][check],
-[data-belong-to="read"][hover]   
-{
-    color: red ;
-
-}
-[data-belong-to="XD"]:hover,
-[data-belong-to="XD"][active],
-[data-belong-to="XD"][check],
-[data-belong-to="XD"][hover] {
-    color: #66BB6A;
-}
 [line] {
     position: relative;
     transition: all 0.6s;
@@ -158,6 +136,23 @@ a:hover  {
 
     animation: message-in 0.6s forwards;
 }
+#saleh {
+    left: 12%;
+    top: 10%;
+    transition: all 0.6s;
+    width: 100px;
+    height: auto;
+    
+}
+#saleh.done {
+    top: 6%;
+    transition: all 0.6s;
+
+}
+#saleh:hover {
+    top: 2%;
+    cursor: url('./click.png'), default;
+}
 @media screen and (max-width: 796px ) {
     .note {
         height: 95vh;
@@ -169,6 +164,9 @@ a:hover  {
     tr, td {
         font-size: 2.5rem;
     }
+    p {
+        word-break: break-all;
+    }
     #message {
         width: 66vw;
         left: 10vw;
@@ -178,6 +176,26 @@ a:hover  {
     }
     [check][line="h"]::after {
         top: 45%;
+    }
+
+    #saleh {
+        bottom:-500px;
+        z-index: 6;
+        transition: all 0.6s;
+        top: unset;
+        left: unset;
+        right: 12%;
+        width: 130px;
+    }
+    #saleh.done {
+        top: unset;
+        left: unset;
+        bottom: -8%;
+        transition: all 0.6s;
+
+    }
+    #saleh:hover {
+        bottom: 6%;
     }
 }
 
@@ -197,6 +215,7 @@ a:hover  {
         bottom: -500px
     }
 }
+
 /* .preloader[data-v-2f2b8c5e] {
     width: 100%;
     height: 100%;
