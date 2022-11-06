@@ -33,6 +33,18 @@ img {
     display: block;
     position: absolute;
 }
+a {
+    color: #2196F3;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+}
+h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
 .note {
     width: 100vw;
     height: 100vh;
@@ -59,7 +71,8 @@ table {
 
 }
 [data-belong-to]:hover,
-[data-belong-to][check]  {
+[data-belong-to][check],
+a:hover  {
     opacity: 1;
     transition: 0.6s all;
     cursor: url('./click.png'), default;
@@ -127,7 +140,24 @@ table {
     transition: all 0.6s;
     opacity: 1;
 }
+#message {
+    display: none;
+    position: fixed;
+    width: 50vw;
+    left: 20vw;
+    height: 150px;
 
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+    border-radius: 1rem;
+    border: 3px solid #000;
+    padding: 10px 20px ;
+    box-shadow: 3px 1px 51px -2px rgba(237,237,237,0.87);
+    -webkit-box-shadow: 3px 1px 51px -2px rgba(237,237,237,0.87);
+    -moz-box-shadow: 3px 1px 51px -2px rgba(237,237,237,0.87);
+
+    animation: message-in 0.6s forwards;
+}
 @media screen and (max-width: 796px ) {
     .note {
         height: 95vh;
@@ -138,6 +168,27 @@ table {
     }
     tr, td {
         font-size: 2.5rem;
+    }
+    #message {
+        width: 66vw;
+        left: 10vw;
+    }
+}
+
+@keyframes message-in {
+    from {
+        bottom: -500px;
+    }
+    to {
+        bottom: 40vh;
+    }
+}
+@keyframes message-out {
+    from {
+        bottom: 40vh;
+    }
+    to {
+        bottom: -500px
     }
 }
 /* .preloader[data-v-2f2b8c5e] {
