@@ -145,8 +145,8 @@ a:hover  {
     position: fixed;
     width: 50vw;
     left: 20vw;
-    height: 150px;
-
+    min-height: 150px;
+    height: auto;
     background-color: rgb(255, 255, 255);
     z-index: 10;
     border-radius: 1rem;
@@ -172,6 +172,12 @@ a:hover  {
     #message {
         width: 66vw;
         left: 10vw;
+    }
+    [check][line="v"]::after {
+        left: 44%;
+    }
+    [check][line="h"]::after {
+        top: 45%;
     }
 }
 
